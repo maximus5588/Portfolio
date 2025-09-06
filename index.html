@@ -112,23 +112,47 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2 data-aos="fade-down">Projects</h2>
-    <div class="projects-container" data-aos="fade-up">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Short description of project 1</p>
-      </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Short description of project 2</p>
-      </div>
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>Short description of project 3</p>
-      </div>
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <h2 data-aos="fade-down">Projects</h2>
+  <p data-aos="fade-up">Some of the projects I have worked on recently.</p>
+
+  <div class="projects-container">
+    <!-- Project Card 1 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="projects/maxkart.png" alt="Maxkart E-Commerce">
+      <h3>Maxkart E-Commerce</h3>
+      <p>A full-stack e-commerce website built with Django and React. Users can browse products, add to cart, and checkout securely.</p>
+      <a href="#" class="btn">View Project</a>
     </div>
-  </section>
+
+    <!-- Project Card 2 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="projects/metro.png" alt="Metro Ticket Booking">
+      <h3>Metro Ticket Booking</h3>
+      <p>Online metro ticket booking platform with seat selection and automated ticket generation. Built with Node.js, Express, and PostgreSQL.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="projects/elearning.png" alt="Online E-Learning Platform">
+      <h3>Online E-Learning Platform</h3>
+      <p>An e-learning platform with course management, quizzes, and progress tracking. Implemented using Django, React, and PostgreSQL.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <!-- Project Card 4 -->
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+      <img src="projects/erp.png" alt="Construction Management ERP">
+      <h3>Construction Management ERP</h3>
+      <p>A complete ERP solution for construction companies, including employee, project, and finance modules. Built with React, Node.js, and PostgreSQL.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- About Section -->
   <section class="about" id="about">
@@ -137,21 +161,65 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2 data-aos="fade-down">Contact Me</h2>
-    <p data-aos="fade-up">Feel free to reach out for collaborations or freelance work!</p>
-    <form data-aos="fade-up">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to send me a message.</p>
+
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="formMessage" style="margin-top:10px;"></p>
+  </form>
+</section>
+  <!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Adarsh KS. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <a href="mailto:youremail@example.com">Email</a>
+  </div>
+</footer>
+
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
+
+    // Contact Form Submission
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      try {
+        const response = await fetch("http://localhost:5000/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          formMessage.textContent = "Message sent successfully!";
+          form.reset();
+        } else {
+          formMessage.textContent = "Failed to send message. Try again.";
+        }
+      } catch (err) {
+        formMessage.textContent = "Error sending message.";
+        console.error(err);
+      }
+    });
   </script>
 </body>
 </html>
