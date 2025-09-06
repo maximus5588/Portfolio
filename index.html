@@ -10,9 +10,17 @@
 
   <!-- Navbar -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <!-- Scroll (sections inside this page) -->
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Separate Pages -->
+    <a href="projects.html">Projects Page</a>
+    <a href="about.html">About Page</a>
+    <a href="contact.html">Contact Page</a>
   </nav>
 
   <!-- Hero Section -->
@@ -20,24 +28,56 @@
     <div class="hero-text">
       <h1>Full Stack Developer</h1>
       <p>
-        Hi, I’m Adarsh KS, a passionate Software Developer with strong foundations 
+        Hi, I’m <strong>Adarsh KS</strong>, a passionate Software Developer with strong foundations 
         in Python, Django, Java, React, Node.js, Spring Boot and PostgreSQL. 
         I enjoy building scalable, real-world applications that solve problems efficiently.
       </p>
-      <a href="#skills" class="btn">Explore More ↓</a>
+      <a href="projects.html" class="btn">Explore Projects ↓</a>
     </div>
 
     <div class="hero-image">
-  <div class="blob">
-    <div class="image-wrapper">
-      <img src="profile.jpg" alt="Profile">
-    </div>
-  </div>
-</div>
-
+      <div class="blob">
+        <div class="image-wrapper">
+          <img src="profile.jpg" alt="Profile">
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">Maxkart – E-commerce in Django & PostgreSQL</div>
+      <div class="card">Metro Ticket Booking – Web App</div>
+      <div class="card">ERP System – React, Node.js, PostgreSQL</div>
+    </div>
+  </section>
+  <!--Skills session-->
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am an MCA student and software developer. I love designing full-stack applications 
+      that blend functionality with clean UI. Always learning, always building!
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+  <h1>Get in Touch</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Adarsh KS | Portfolio</p>
+  </footer>
 
 </body>
 </html>

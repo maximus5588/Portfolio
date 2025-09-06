@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h1 data-aos="fade-down">My Skills</h1>
+    <p data-aos="fade-up">Here are some of the technologies and tools I work with:</p>
+
+    <div class="skills-container">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+        <h2>Frontend</h2>
+        <ul>
+          <li>HTML5 / CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React.js</li>
+          <li>Tailwind / Bootstrap</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+        <h2>Backend</h2>
+        <ul>
+          <li>Node.js / Express</li>
+          <li>Python / Django</li>
+          <li>REST APIs</li>
+          <li>Authentication & Security</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+        <h2>Database</h2>
+        <ul>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+        <h2>Tools</h2>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Postman</li>
+          <li>Docker (basic)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Slider -->
+<section class="tech-stack" data-aos="fade-up">
+  <h2>Tech Stack</h2>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide"><img src="logos/html5.svg" alt="HTML5"></div>
+      <div class="slide"><img src="logos/css3.svg" alt="CSS3"></div>
+      <div class="slide"><img src="logos/javascript.svg" alt="JavaScript"></div>
+      <div class="slide"><img src="logos/react.svg" alt="React"></div>
+      <div class="slide"><img src="logos/Node.js.svg" alt="Node.js"></div>
+      <div class="slide"><img src="logos/python.svg" alt="Python"></div>
+      <div class="slide"><img src="logos/django.svg" alt="Django"></div>
+      <div class="slide"><img src="logos/PostgresSQL.svg" alt="PostgreSQL"></div>
+      <!-- Repeat for infinite scroll -->
+      <div class="slide"><img src="logos/html5.svg" alt="HTML5"></div>
+      <div class="slide"><img src="logos/css3.svg" alt="CSS3"></div>
+      <div class="slide"><img src="logos/javascript.svg" alt="JavaScript"></div>
+      <div class="slide"><img src="logos/react.svg" alt="React"></div>
+      <div class="slide"><img src="logos/Node.js.svg" alt="Node.js"></div>
+      <div class="slide"><img src="logos/python.svg" alt="Python"></div>
+      <div class="slide"><img src="logos/django.svg" alt="Django"></div>
+      <div class="slide"><img src="logos/PostgresSQL.svg" alt="PostgreSQL"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
